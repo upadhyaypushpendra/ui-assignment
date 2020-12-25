@@ -2,23 +2,20 @@ import React, { useState } from "react";
 import "./styles.css";
 import NavItem from "../NavItem/navItem";
 
-const navItems = [
-  { id: 1, text: "Daily Schedule" },
-  { id: 2, text: "Daily Schedule" },
-  { id: 3, text: "Assignments" },
-];
 export default function Navbar(props) {
   const [selectedItem, setSelectedItem] = useState();
-  const handleClick = (ev, id) => {
-    setSelectedItem(id);
+  const handleClick = (item) => {
+    setSelectedItem(item);
+    props.onItemSelected && props.onItemSelected(item);
   };
   return (
     <div className="nav-root">
-      {navItems.map((item) => (
+      {props.items.map((item) => (
         <NavItem
-          id={item.id}
+          key={item.id}
+          data={item}
           onClick={handleClick}
-          selected={selectedItem === item.id}
+          selected={selectedItem === item}
         >
           {item.text}
         </NavItem>
