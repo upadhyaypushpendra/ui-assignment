@@ -1,0 +1,2 @@
+light : #a0e0df
+dark : #14c4d0
