@@ -1,5 +1,6 @@
 import React from "react";
-import Navbar from "./../Navbar/navbar";
+
+import Navbar from "../Navbar/Navbar";
 
 const navItems = [
   { id: 1, text: "Daily Schedule" },
@@ -8,9 +9,11 @@ const navItems = [
 ];
 
 export default function Home(props) {
-  const handleItemSelected =(item)=> {
+  
+  const handleItemSelected = (item) => {
     // Do something on selecting nav item
-    console.log("Selected : ",item.text);
-  }
-  return <Navbar items={navItems} onItemSelected={handleItemSelected}/>;
+    console.log("Selected : ", item.text);
+  };
+
+  return <Navbar items={navItems} onItemSelected={handleItemSelected} />;
 }

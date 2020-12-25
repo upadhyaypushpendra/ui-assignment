@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "./components/Home/home";
-import './index.css';
+import Home from "./components/Home/Home";
+import "./index.css";
 
 function App() {
-  return <Home/>;
+  return <Home />;
 }
 
 const rootElement = document.getElementById("root");
