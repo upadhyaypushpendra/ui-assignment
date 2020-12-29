@@ -10,8 +10,8 @@ const useStyles = makeStyles((theme) => {
       justifyContent: "center",
     },
     image: {
-      maxWidth: "300px",
-      maxHeight: "300px",
+      maxWidth: "550px",
+      maxHeight: "550px",
     },
   };
 });

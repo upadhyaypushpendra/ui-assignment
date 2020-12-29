@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => {
     },
     content: {
       margin: "10px",
+      padding : "10px 50px"
     },
   };
 });
@@ -31,9 +32,9 @@ function Content(props) {
       <h1 className={classes.title}>{props.title}</h1>
       {props.details &&
         props.details.map((para) => (
-          <Typography variant="p" component="p" className={classes.content}>
+          <p className={classes.content}>
             {para}
-          </Typography>
+          </p>
         ))}
     </ListItem>
   );

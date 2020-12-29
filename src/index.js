@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import LiveClasses from "./components/pages/LiveClasses";
 import "./index.css";
 import Footer from "./components/Footer";
+import LivePhonics from "./components/pages/LivePhonics";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       <Switch>
         <Route path="/live-classes">
           <LiveClasses />
+        </Route>
+        <Route path="/live-phonics">
+          <LivePhonics />
         </Route>
         <Route path="/">
           <Home />
