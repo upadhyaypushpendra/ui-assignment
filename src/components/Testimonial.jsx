@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => {
       padding: "20px",
       borderBottom: "2px solid black",
       maxWidth: "1140px",
-      margin : "20px auto"
+      margin: "20px auto",
     },
     testimonialWrapper: {},
     testimonial: {
@@ -29,21 +29,21 @@ const useStyles = makeStyles((theme) => {
       position: "relative",
       width: "60px",
       height: "60px",
-      padding : "20px",
+      padding: "20px",
     },
     senderLogo: {
       position: "relative",
       width: "100%",
       height: "100%",
     },
-    name : {
-        fontSize : "16px",
+    name: {
+      fontSize: "16px",
     },
-    job : {
-        fontSize: ".85em",
-        color: "inherit",
-        display: "block",
-    }
+    job: {
+      fontSize: ".85em",
+      color: "inherit",
+      display: "block",
+    },
   };
 });
 

@@ -1,13 +1,15 @@
 import React from "react";
-import { Button, Divider, List, ListItem } from "@material-ui/core";
+
+import { Link } from "react-router-dom";
+
+import { Button, List, ListItem } from "@material-ui/core";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 
 import Poster from "../Poster";
+import Content from "../Content";
+
 import phonicsPoster from "./../../assets/live-english.png";
 import mathsPoster from "./../../assets/live-maths.png";
-
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import Content from "../Content";
-import { Link } from "react-router-dom";
 
 const liveClasses = [
   {
@@ -34,7 +36,7 @@ const useStyles = makeStyles((theme) => {
   return {
     root: {
       maxWidth: `inherit`,
-      paddingBottom : 0,
+      paddingBottom: 0,
     },
     column: {
       display: "flex",
@@ -46,6 +48,7 @@ const useStyles = makeStyles((theme) => {
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-between",
+      borderBottom : "2px solid black",
       padding: "20px",
       "& >": {
         flex: "1 1 0",
@@ -73,6 +76,7 @@ const ColorButton = withStyles((theme) => ({
 
 function LiveClasses(props) {
   const classes = useStyles();
+
   return (
     <List className={classes.root}>
       {liveClasses.map((liveClass) => (
@@ -88,16 +92,6 @@ function LiveClasses(props) {
               </Link>
             </ListItem>
           </List>
-
-          <hr
-            style={{
-              border: "1px solid black",
-              background: "black",
-              margin: 0,
-              marginBlockStart: 0,
-              marginBlockEnd: "0",
-            }}
-          />
         </>
       ))}
     </List>

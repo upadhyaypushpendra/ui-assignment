@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => {
     },
   };
 });
+
 function Title(props) {
   const classes = useStyles();
 

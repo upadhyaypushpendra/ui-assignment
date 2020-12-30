@@ -1,15 +1,18 @@
 import React from "react";
 
 import { withStyles, makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import { TablePagination } from "@material-ui/core";
-import Paper from "@material-ui/core/Paper";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  TablePagination,
+  Paper,
+} from "@material-ui/core";
 
+import ButtonLink from "../ButtonLink";
 import "./styles.css";
 
 const StyledTableCell = withStyles((theme) => ({
@@ -25,8 +28,11 @@ const StyledTableCell = withStyles((theme) => ({
 
 const StyledTableHeadCell = withStyles((theme) => ({
   head: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
+    backgroundColor: "#d9edf7",
+    color: theme.palette.common.black,
+    fontSize: "18px",
+    fontWeight: 700,
+    padding: "8px",
   },
   body: {
     fontSize: "18px",
@@ -49,7 +55,6 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-
 const useStyles = makeStyles((theme) => {
   return {
     summary: {
@@ -61,11 +66,22 @@ const useStyles = makeStyles((theme) => {
       borderBottom: "1px solid #d4d4d4",
       outline: "none",
     },
+    buttonLink: {
+      textDecoration: "none",
+      "& :hover": {
+        backgroundColor: "#398b00",
+      },
+    },
+    button: {
+      margin: "20px 0px",
+      backgroundColor: "#398b00",
+    },
   };
 });
 
-function UpcomingBatch({ batches, rowsPerPage }) {
+function UpcomingBatch({ batch, rowsPerPage }) {
   const classes = useStyles();
+
   const [page, setPage] = React.useState(0);
 
   const handleChangePage = (event, newPage) => {
@@ -88,7 +104,7 @@ function UpcomingBatch({ batches, rowsPerPage }) {
               </TableRow>
             </StyledTableHead>
             <TableBody>
-              {batches
+              {batch.classes
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row) => (
                   <StyledTableRow key={row.classNumber}>
@@ -102,13 +118,14 @@ function UpcomingBatch({ batches, rowsPerPage }) {
         </TableContainer>
         <TablePagination
           component="div"
-          count={batches.length}
+          count={batch.classes.length}
           rowsPerPageOptions={[rowsPerPage]}
           rowsPerPage={rowsPerPage}
           page={page}
           onChangePage={handleChangePage}
         />
       </details>
+      <ButtonLink href="#">Book Now</ButtonLink>
     </div>
   );
 }

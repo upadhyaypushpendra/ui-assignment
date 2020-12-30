@@ -1,13 +1,13 @@
 import { IconButton } from "@material-ui/core";
-import { Home } from "@material-ui/icons";
 
-import logo from "./../assets/cropped-logo.png"
+import logo from "./../assets/cropped-logo.png";
+
 function AppLogo(props) {
-    return (
-        <IconButton edge="start" color="inherit" aria-label="kutuki-home">
-          <img src={logo} alt="Kutuki" height="55px"/>
-        </IconButton>
-    );
+  return (
+    <IconButton edge="start" color="inherit" aria-label="kutuki-home">
+      <img src={logo} alt="Kutuki" height="55px" />
+    </IconButton>
+  );
 }
 
 export default AppLogo;

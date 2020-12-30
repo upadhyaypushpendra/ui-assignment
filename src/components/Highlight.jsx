@@ -1,5 +1,3 @@
-import { Box, Typography } from "@material-ui/core";
-
 import { makeStyles } from "@material-ui/core/styles";
 import Title from "./Title";
 
@@ -20,7 +18,7 @@ const useStyles = makeStyles((theme) => {
       letterSpacing: "-0.24px",
       textAlign: "center",
       whiteSpace: "pre-wrap",
-      padding : "0 30px"
+      padding: "0 30px",
     },
     imageWrapper: {
       height: "200px",

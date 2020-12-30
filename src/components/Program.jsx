@@ -1,5 +1,6 @@
 import { List, ListItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+
 import Highlight from "./Highlight";
 import Title from "./Title";
 
@@ -24,6 +25,7 @@ const useStyles = makeStyles((theme) => {
     },
   };
 });
+
 function Program({ program }) {
   const classes = useStyles();
   return (
@@ -39,7 +41,7 @@ function Program({ program }) {
           </List>
         </div>
         <div className={classes.marginPadding}>
-          <img src={program.bookTestimonial} alt="Image" />
+          <img src={program.bookTestimonial} alt="BookTestimonial" />
         </div>
       </div>
       <div className={classes.row}>

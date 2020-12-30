@@ -7,7 +7,9 @@ import Header from "./components/Header";
 import LiveClasses from "./components/pages/LiveClasses";
 import "./index.css";
 import Footer from "./components/Footer";
-import LivePhonics from "./components/pages/LivePhonics";
+import LiveClass from "./components/pages/LiveClass";
+
+import { phonicsClass, mathsClass } from "./classData";
 
 function App() {
   return (
@@ -18,7 +20,10 @@ function App() {
           <LiveClasses />
         </Route>
         <Route path="/live-phonics">
-          <LivePhonics />
+          <LiveClass liveClass={phonicsClass}/>
+        </Route>
+        <Route path="/live-maths">
+          <LiveClass liveClass={mathsClass} />
         </Route>
         <Route path="/">
           <Home />

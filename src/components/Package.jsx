@@ -1,8 +1,8 @@
-import { Box, List, ListItem, Typography } from "@material-ui/core";
-
+import { Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Title from "./Title";
+import UpcomingBatch from "./UpcomingBatch/UpcomingBatch";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => {
       fontSize: "13px",
     },
     topicsWrapper: {
-        textAlign : "left",
+      textAlign: "left",
     },
     topics: {
       listStyle: "none",
@@ -93,7 +93,11 @@ function Package({ packageDetail }) {
           alt={packageDetail.name}
         />
       </div>
-      <Title text={packageDetail.name} size={20} color={packageDetail.nameColor} />
+      <Title
+        text={packageDetail.name}
+        size={20}
+        color={packageDetail.nameColor}
+      />
       <div className={classes.audience}>{packageDetail.audience}</div>
       <div className={classes.topicsWrapper}>
         <ul className={classes.topics}>
@@ -117,7 +121,21 @@ function Package({ packageDetail }) {
           <p>*-{note}</p>
         ))}
       </div>
-      <div className={classes.alert}>Filling Fast!</div>
+      {packageDetail.upcomingBatches.length > 0 ? (
+        <>
+          {packageDetail.upcomingBatches.map((upcomingBatch) => (
+            <UpcomingBatch batch={upcomingBatch} rowsPerPage={10} />
+          ))}
+          <div className={classes.alert}>Filling Fast!</div>
+        </>
+      ) : (
+        <div>
+          <Button disabled style={{ backgroundColor: "red", color: "black" }}>
+            Batches Full
+          </Button>
+          <Title text="New batches comming soon" size="17" />
+        </div>
+      )}
     </div>
   );
 }

@@ -1,22 +1,19 @@
 import React from "react";
+
 import { List } from "@material-ui/core";
-
-import Poster from "../Poster";
-
 import { makeStyles } from "@material-ui/core/styles";
 
+import Poster from "../Poster";
 import Content from "../Content";
 import Package from "../Package";
 import Testimonial from "../Testimonial";
 import Program from "../Program";
-
-import {phonicsClass} from "./../../classData";
+import Title from "../Title";
 
 const useStyles = makeStyles((theme) => {
   return {
     root: {
-      maxWidth: `inherit`,
-      paddingBottom: 0,
+      textAlign: "center",
     },
     marginPadding: {
       margin: "10px",
@@ -35,7 +32,14 @@ const useStyles = makeStyles((theme) => {
       width: "100%",
       justifyContent: "center",
     },
-    packageHeaderWrapper : {
+    packages: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      borderBottom: "2px solid black",
+      flexWrap: "row",
+    },
+    packageHeaderWrapper: {
       backgroundColor: "#d9fffd",
       padding: "20px",
       width: "96%",
@@ -56,26 +60,31 @@ const useStyles = makeStyles((theme) => {
   };
 });
 
-function LivePhonics(props) {
+function LivePhonics({ liveClass }) {
   const classes = useStyles();
+
   return (
-    <div className={classes.column}>
+    <div className={classes.root}>
       <List className={classes.container}>
-        <Content title={phonicsClass.title} titleColor={"rgb(231, 53, 53)"} details={phonicsClass.details} />
-        <Poster title={phonicsClass.title} image={phonicsClass.image} />
+        <Content
+          title={liveClass.title}
+          titleColor={"rgb(231, 53, 53)"}
+          details={liveClass.details}
+        />
+        <Poster title={liveClass.title} image={liveClass.image} />
       </List>
-      <Program program={phonicsClass.program}/>
-      <div className={classes.packageHeaderWrapper} >
-        <h1>Packages</h1>
+      <Program program={liveClass.program} />
+      <div className={classes.packageHeaderWrapper}>
+        <Title text={"Packages"} size={26} />
         <p>We offer 3 packages tailor made to suit different learning levels</p>
       </div>
-      <div className={classes.row}>
-        {phonicsClass.packages.map((p) => (
+      <div className={classes.packages}>
+        {liveClass.packages.map((p) => (
           <Package packageDetail={p} />
         ))}
       </div>
       <div>
-        {phonicsClass.testimonials.map((testimonial) => (
+        {liveClass.testimonials.map((testimonial) => (
           <Testimonial testimonial={testimonial} />
         ))}
       </div>

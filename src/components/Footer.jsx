@@ -1,7 +1,7 @@
-import { Box, List, Typography } from "@material-ui/core";
-
-import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
+
+import { Box, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
 import whatsAppLogo from "./../assets/whatsapp-logo.png";
 
@@ -28,14 +28,15 @@ const useStyles = makeStyles((theme) => {
         paddingBottom: "10px",
       },
     },
-    link : {
-        color: "#fff",
-        textDecoration : "none",
-        padding : "10px 20px",
-        fontSize : "0.9em"
+    link: {
+      color: "#fff",
+      textDecoration: "none",
+      padding: "10px 20px",
+      fontSize: "0.9em",
     },
   };
 });
+
 function Footer(params) {
   const classes = useStyles();
 
@@ -51,19 +52,23 @@ function Footer(params) {
       </Box>
       <Box className={classes.privacyInfo}>
         <Box display="flex" flexDirection="row" justifyItems="space-between">
-        <Link to="#" className={classes.link}>
-          <Typography component="p" variant="span">
-            Privary Policy
-          </Typography>
+          <Link to="#" className={classes.link}>
+            <Typography component="p" variant="span">
+              Privary Policy
+            </Typography>
           </Link>
           <Link to="#" className={classes.link}>
-          <Typography component="p" variant="span">
-            Terms of Use
-          </Typography>
+            <Typography component="p" variant="span">
+              Terms of Use
+            </Typography>
           </Link>
         </Box>
-        <Typography component="p" variant="span" style={{fontSize:"smallest",padding:"20px"}} >
-                Copyright @2020 | Soniqmantra Private Limited
+        <Typography
+          component="p"
+          variant="span"
+          style={{ fontSize: "smallest", padding: "20px" }}
+        >
+          Copyright @2020 | Soniqmantra Private Limited
         </Typography>
       </Box>
     </>
