@@ -5,8 +5,6 @@ import {
   AppBar,
   Toolbar,
   List,
-  ListItem,
-  ListItemText,
   Container,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -32,21 +30,32 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "space-between",
   },
-  linkText: {
+  selected: {
+    color: "#4ceeeb !important",
+    backgroundSize: "100% 100% !important",
+  },
+  menuWrapper: {
     fontWeight: "bold",
     fontFamily: "'Open Sans',sans-serif",
     textDecoration: "none",
-    borderBottom: "5px solid transparent",
     color: "black",
-    transformOrigin: "left",
-    transition: "border 0.5s ease-in",
+    margin: "0px 5px",
+    paddingBottom: "5px",
+    width: "fit-content",
+    backgroundImage: "linear-gradient(#5195AE, #5195AE)",
+    backgroundPosition: "50% 50%",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "0% 100%",
+    transition: "background-size .5s, color .5s",
     "&:hover": {
-      borderBottom: "5px solid #5195ae",
+      backgroundSize: "100% 100%",
+      color: "#4ceeeb",
     },
   },
-  selected: {
-    color: "#4ceeeb",
-    borderBottom: "5px solid #5195ae",
+  menu: {
+    background: "white",
+    padding: "5px 15px",
+    width: "fit-content",
   },
 });
 
@@ -75,12 +84,10 @@ function Header(props) {
             {navLinks.map(({ title, path }) => (
               <NavLink
                 to={path}
-                className={classes.linkText}
+                className={classes.menuWrapper}
                 activeClassName={classes.selected}
               >
-                <ListItem>
-                  <ListItemText primary={title} />
-                </ListItem>
+                <div className={classes.menu}>{title}</div>
               </NavLink>
             ))}
           </List>
