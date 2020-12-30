@@ -41,15 +41,6 @@ function Footer(params) {
 
   return (
     <>
-      <hr
-        style={{
-          border: "1px solid black",
-          background: "black",
-          margin: 0,
-          marginBlockStart: 0,
-          marginBlockEnd: "0",
-        }}
-      />
       <Box className={classes.contactInfo}>
         <Typography component="p" variant="p">
           WhatsApp us to learn more

@@ -1,17 +1,10 @@
 import { ListItem, Typography } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
+import Title from "./Title";
 
 const useStyles = makeStyles((theme) => {
   return {
-    title: {
-      color: "#e73535",
-      fontFamily: "'Open Sans',sans-serif",
-      fontSize: "30px",
-      fontWeight: "bold",
-      margin: "20px",
-      lineHeight: 1,
-    },
     contentWrapper: {
       display: "flex",
       flexDirection: "column",
@@ -29,7 +22,7 @@ function Content(props) {
 
   return (
     <ListItem className={classes.contentWrapper}>
-      <h1 className={classes.title}>{props.title}</h1>
+      <Title text={props.title} color={props.titleColor} size={24} />
       {props.details &&
         props.details.map((para) => (
           <p className={classes.content}>

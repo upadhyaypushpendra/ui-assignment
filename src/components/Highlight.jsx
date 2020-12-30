@@ -1,6 +1,7 @@
 import { Box, Typography } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
+import Title from "./Title";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -38,7 +39,7 @@ function Highlight(props) {
       <div className={classes.imageWrapper}>
         <img alt="widgetIcon" src={props.image} />
       </div>
-      <h3 className={classes.title}>{props.title}</h3>
+      <Title text={props.title} size={16} />
       <p className={classes.detail}>{props.detail}</p>
     </div>
   );

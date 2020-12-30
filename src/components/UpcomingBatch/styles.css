@@ -1,0 +1,23 @@
+details[open] summary ~ * {
+  animation: sweepOut 0.5s ease-in;
+}
+details:not[open] summary ~ * {
+  animation: sweepIn 0.5s ease-in-out;
+}
+@keyframes sweepOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sweepIn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

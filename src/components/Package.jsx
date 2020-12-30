@@ -2,6 +2,8 @@ import { Box, List, ListItem, Typography } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
 
+import Title from "./Title";
+
 const useStyles = makeStyles((theme) => {
   return {
     root: {
@@ -91,7 +93,7 @@ function Package({ packageDetail }) {
           alt={packageDetail.name}
         />
       </div>
-      <div className={classes.title}>{packageDetail.name}</div>
+      <Title text={packageDetail.name} size={20} color={packageDetail.nameColor} />
       <div className={classes.audience}>{packageDetail.audience}</div>
       <div className={classes.topicsWrapper}>
         <ul className={classes.topics}>
