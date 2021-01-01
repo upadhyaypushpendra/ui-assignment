@@ -6,7 +6,7 @@ import { Button, List, ListItem } from "@material-ui/core";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 
 import Poster from "../Poster";
-import Content from "../Content";
+import Content from "../screens/Content";
 
 import phonicsPoster from "./../../assets/live-english.png";
 import mathsPoster from "./../../assets/live-maths.png";
@@ -28,7 +28,7 @@ const liveClasses = [
       "Our program is designed to impart the necessary tools for your child to make sense of and organize the world around them.",
     ],
     image: mathsPoster,
-    url: "/live-maths",
+    url: "/live-math",
   },
 ];
 

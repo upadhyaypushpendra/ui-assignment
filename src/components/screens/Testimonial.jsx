@@ -2,8 +2,8 @@ import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-import maleIcon from "./../assets/Kutu-Wave-Both-Arms.png";
-import femaleIcon from "./../assets/Ki-Both-Arms-Wave.png";
+import maleIcon from "./../../assets/Kutu-Wave-Both-Arms.png";
+import femaleIcon from "./../../assets/Ki-Both-Arms-Wave.png";
 
 const useStyles = makeStyles((theme) => {
   return {

@@ -1,7 +1,7 @@
 import { ListItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Title from "./Title";
+import Title from "../Title";
 
 const useStyles = makeStyles((theme) => {
   return {
