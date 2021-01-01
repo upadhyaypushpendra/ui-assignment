@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Home from "./components/Home/Home";
-import Header from "./components/screens/Header";
-import LiveClasses from "./components/pages/LiveClasses";
-import "./index.css";
-import Footer from "./components/screens/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import LiveClass from "./components/pages/LiveClass";
+import LiveClasses from "./components/pages/LiveClasses";
+
+import "./index.css";
 
 import { phonicsClass, mathsClass } from "./classData";
 
