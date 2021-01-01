@@ -12,7 +12,7 @@ import {
   Paper,
 } from "@material-ui/core";
 
-import ButtonLink from "../ButtonLink";
+import ButtonLink from "./../../ButtonLink";
 import "./styles.css";
 
 const StyledTableCell = withStyles((theme) => ({

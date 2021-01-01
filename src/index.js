@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Home from "./components/Home/Home";
-import Header from "./components/Header";
+import Header from "./components/screens/Header";
 import LiveClasses from "./components/pages/LiveClasses";
 import "./index.css";
-import Footer from "./components/Footer";
+import Footer from "./components/screens/Footer";
 import LiveClass from "./components/pages/LiveClass";
 
 import { phonicsClass, mathsClass } from "./classData";
@@ -22,7 +22,7 @@ function App() {
         <Route path="/live-phonics">
           <LiveClass liveClass={phonicsClass}/>
         </Route>
-        <Route path="/live-maths">
+        <Route path="/live-math">
           <LiveClass liveClass={mathsClass} />
         </Route>
         <Route path="/">

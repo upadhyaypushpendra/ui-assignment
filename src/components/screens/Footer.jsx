@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Box, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import whatsAppLogo from "./../assets/whatsapp-logo.png";
+import whatsAppLogo from "./../../assets/whatsapp-logo.png";
 
 const useStyles = makeStyles((theme) => {
   return {

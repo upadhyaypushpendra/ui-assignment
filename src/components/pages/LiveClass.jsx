@@ -3,12 +3,12 @@ import React from "react";
 import { List } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Poster from "../Poster";
-import Content from "../Content";
-import Package from "../Package";
-import Testimonial from "../Testimonial";
-import Program from "../Program";
+import Poster from "./../Poster";
 import Title from "../Title";
+import Package from "./../screens/Package";
+import Program from "./../screens/Program";
+import Content from "./../screens/Content";
+import Testimonial from "./../screens/Testimonial";
 
 const useStyles = makeStyles((theme) => {
   return {
